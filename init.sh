@@ -17,14 +17,20 @@ sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 # Install pyenv
 sudo apt install make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 curl https://pyenv.run | bash
+exec $SHELL
 pyenv install 3.7.12
+pyenv rehash
 pyenv install 3.8.12
+pyenv rehash
 pyenv install 3.9.9
+pyenv rehash
 pyenv install 3.10.1
+pyenv rehash
 
 # Configure pyenv defaults and upgrade pip
 pyenv global 3.10.1
 pyenv rehash
+exec $SHELL
 python -m pip install --upgrade pip
 pip install wheel
 

@@ -7,6 +7,7 @@ sudo apt upgrade -y
 
 # Install linux packages
 sudo apt install build-essential # Required to build python and use pyenv.
+sudo apt install zlib1g-dev      # Required to build python and use pyenv.
 sudo apt install tree
 sudo apt install bat
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"

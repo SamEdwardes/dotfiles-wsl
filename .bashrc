@@ -3,12 +3,15 @@
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 # Alias
-alias ls="ls -la --color=always"
-alias cat="batcat --paging=never"
+alias bat="batcat --paging=never"
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
 
+# starship
 eval "$(starship init bash)"
+
+# poetry
+export PATH="/home/sedwardes/.local/bin:$PATH"

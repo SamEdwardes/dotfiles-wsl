@@ -27,7 +27,12 @@ pyenv global 3.10.1
 pyenv rehash
 python -m pip install --upgrade pip
 pip install wheel
+
+# pipx
 pip install pipx
+pipx ensurepath
+pipx install black
+pipx install flake8
 
 # Create default python virtual environments
 mkdir ~/.virtualenvs
@@ -39,4 +44,3 @@ pip install jupyterlab pandas dash streamlit
 
 # Set up poetry
 curl -sSL https://install.python-poetry.org | python3 -
-

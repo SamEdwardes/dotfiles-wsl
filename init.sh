@@ -46,7 +46,16 @@ python -m venv ~/.virtualenvs/py310
 source ~/.virtualenvs/py310/bin/activate
 python -m pip install --upgrade pip
 pip install wheel
-pip install jupyterlab pandas dash streamlit
+pip install jupyterlab pandas dash streamlit rich typer
 
 # Set up poetry
 curl -sSL https://install.python-poetry.org | python3 -
+
+# Copy .bashrc_template into .bashrc
+echo "" >> ~/.bashrc
+echo "" >> ~/.bashrc
+cat .bashrc_template >> ~/.bashrc
+
+# Complete!
+exec $SHELL
+echo "Complete!"

@@ -5,11 +5,17 @@ echo "Setting up your WSL..."
 sudo apt update
 sudo apt upgrade -y
 
+# =============================================================================
 # Install linux packages
+# =============================================================================
 sudo apt install tree
 sudo apt install bat
-sudo apt install newvim
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+
+# neovim
+sudo apt install neovim
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
 
 # =============================================================================
 # Python

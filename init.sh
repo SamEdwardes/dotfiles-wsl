@@ -8,6 +8,7 @@ sudo apt upgrade -y
 # Install linux packages
 sudo apt install tree
 sudo apt install bat
+sudo apt install newvim
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 # =============================================================================

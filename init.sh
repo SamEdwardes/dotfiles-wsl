@@ -10,6 +10,7 @@ sudo apt upgrade -y
 # =============================================================================
 sudo apt install tree
 sudo apt install bat
+sudo apt install wget ca-certificates
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
 # neovim
